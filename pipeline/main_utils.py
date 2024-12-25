@@ -71,7 +71,7 @@ def register_args_and_configs(args):
         logger.info(f'Output folder dir {args.output_folder_dir} already exist.')
 
 
-    # Copy input eval config to output dir.
+    # Copy input eval config to output dir. #NOTE: Don't understand why it's related to output dir. I see now, Check below..... 
     with open(args.eval_config_dir) as eval_config_f:
         eval_config = json.load(eval_config_f)
         logger.info(f'Input eval config file {args.eval_config_dir} loaded.')
@@ -105,7 +105,7 @@ def register_args_and_configs(args):
     config = dict()
     config['pipeline_params'] = pipeline_config['pipeline_params']
     config['eval_params'] = eval_config['eval_params']
-    config['eval_results'] = dict() # processed result
+    config['eval_results'] = dict() # processed result #NOTE： 为什么config中会有result?
 
     config['management'] = dict()
     config['management']['exp_desc'] = args.exp_desc

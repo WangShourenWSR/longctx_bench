@@ -4,3 +4,9 @@ __pycache__
 dataset
 pipeline/kivi/quant/build/*
 kivi_gemv.cpython*
+
+# ignore vscode setting
+.vscode
+
+# ignore outputs
+output/
